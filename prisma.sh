@@ -3,7 +3,7 @@
 
 echo "Prisma install"
 
-npm install prisma --save-dev
+npm install prisma@4.8.0 --save-dev
 
 echo "Creating Prisma CLI initial configuration"
 
