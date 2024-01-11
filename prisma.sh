@@ -3,7 +3,7 @@
 
 echo "Prisma install"
 
-npm install prisma@4.8.0 --save-dev
+npm install prisma  --save-dev
 
 echo "Creating Prisma CLI initial configuration"
 
@@ -96,7 +96,7 @@ export class PrismaService extends PrismaClient implements OnModuleInit {
   }
 
   async enableShutdownHooks(app: INestApplication) {
-    this.\$on('beforeExit', async () => {
+    process.on('beforeExit', async () => {
       await app.close();
     });
   }
